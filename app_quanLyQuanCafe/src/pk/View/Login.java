@@ -201,6 +201,7 @@ public class Login extends javax.swing.JFrame {
     connectDbSql con = new connectDbSql();
     public static taiKhoan tkhoan;
     public static trangChinh trangc;
+    public static int cd;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String user, pass;
@@ -211,14 +212,14 @@ public class Login extends javax.swing.JFrame {
         tkDn.setUseName(user);
         tkDn.setPass(pass);
         boolean check = con.kiemTraDN(tkDn);
-        System.out.println(check);
+//        System.out.println(check);
+        cd = con.getCap(tkDn);
+        System.out.println(cd);
         if(check == true){
             tkhoan = con.GetTaiKhoan(user, pass);
             this.setVisible(false);
             trangc = new trangChinh();
             trangc.setVisible(true);     
-
-            System.out.println("DUNG");
         }else{
             JOptionPane.showMessageDialog(null, 
                     "Tài khoản hoặc mật khẩu không đúng", "Login Error", JOptionPane.ERROR_MESSAGE);

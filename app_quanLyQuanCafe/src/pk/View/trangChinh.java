@@ -5,6 +5,7 @@
  */
 package pk.View;
 
+import static pk.View.Login.cd;
 import pk.doiTuong.taiKhoan;
 
 /**
@@ -16,11 +17,10 @@ public class trangChinh extends javax.swing.JFrame {
     /**
      * Creates new form trangChinh
      */
-    public static trangChinh trangc;
+    public static taiKhoan tk;
     public trangChinh() {
-        taiKhoan tk = new taiKhoan();
         initComponents();
-        if(tk.getCapDo()!= 1)
+        if(cd !=1)
         {
             btnQuanLy.setEnabled(false);
             btnThongKe.setEnabled(false);
