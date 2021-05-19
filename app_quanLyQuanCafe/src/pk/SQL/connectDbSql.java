@@ -64,4 +64,21 @@ public class connectDbSql {
         }
         return td;
     }
+public int getCap(taiKhoan tk)
+    {
+        int lvtk =0;
+        String sql;
+            sql = "Select capDo From tblTaiKhoan Where usename = '"+tk.getUseName()+"' AND passWords='"+tk.getPass()+"'";
+        try{
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                lvtk = rs.getInt(1);
+            }
+        }catch(SQLException ex){
+            JOptionPane.showMessageDialog(null, "Đã xảy ra lỗi !");
+        }
+        return lvtk; 
+    }    
 }
