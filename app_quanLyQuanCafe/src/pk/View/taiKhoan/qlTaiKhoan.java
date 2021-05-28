@@ -5,9 +5,9 @@
  */
 package pk.View.taiKhoan;
 
-import pk.View.ban.hienThiBan;
+
 import pk.View.nhanVien.showNhanVien;
-import pk.view.HangHoa.showhanghoa;
+
 
 
 /**
@@ -27,8 +27,7 @@ public class qlTaiKhoan extends javax.swing.JPanel {
 
     showTaiKhoan qltk;
     showNhanVien qlnv;
-    hienThiBan qlBan;
-    showhanghoa hh;
+ 
     public void showTT(int i ){
         jPanel2.removeAll();
         switch(i){
@@ -42,20 +41,10 @@ public class qlTaiKhoan extends javax.swing.JPanel {
                     qlnv = new showNhanVien();
                 jPanel2.add(qlnv);
                 break;
-            case 3:
+          
+                    
                 
-                if(qlBan == null)
-                    
-                    qlBan = new hienThiBan();
-                   
-                jPanel2.add(qlBan);
-                break;
-                case 4:
-                if(hh == null)
-                    hh = new showhanghoa();
-                    
-                jPanel2.add(hh);
-                break;
+                
         }
         jPanel2.updateUI();
     }
