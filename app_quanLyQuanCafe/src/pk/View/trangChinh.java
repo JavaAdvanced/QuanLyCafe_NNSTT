@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import pk.ThongKe.ThongKeSanPham;
+
 import pk.View.BanHang.BanHangPanNel;
 import static pk.View.Login.cd;
 import pk.View.taiKhoan.qlTaiKhoan;
@@ -69,7 +69,7 @@ public class trangChinh extends javax.swing.JFrame {
     qlTaiKhoan ql;
     banner bn;
     BanHangPanNel banHang ;
-    ThongKeSanPham SP;
+
     public void showTT(int i) {
         
         JPanel.removeAll();
@@ -89,11 +89,7 @@ public class trangChinh extends javax.swing.JFrame {
                 banHang = new BanHangPanNel();
                 JPanel.add(banHang);
             break;
-            case 5:
-                if(SP == null) {
-                    SP = new ThongKeSanPham();
-                }
-                JPanel.add(SP);
+            
         }
         JPanel.updateUI();
         
